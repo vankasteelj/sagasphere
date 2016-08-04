@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="saga, mp3, audio, radio, fiction, science-fiction, thriller, politique, aventure">
+    <meta name="description" content="Fiction radiophonique de Science-fiction, un thriller politique qui vous emmène à l'aube de la guerre.">
+
+    <title>B.A.D. | Sagasphère</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="assets/css/bad.css" rel="stylesheet">
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="../index.html">Sagasphère</a></h1>
+			<i class="icon-remove menu-close"></i>
+            <a onClick="showAbout()">La Saga</a>
+            <a onClick="showMain()">Écouter</a>
+			<a onClick="showDownload()">Télécharger</a>
+			<a href="https://facebook.com/vankasteelj"><i class="icon-facebook"></i></a>
+			<a href="https://twitter.com/vankasteelj"><i class="icon-twitter"></i></a>
+			<a href="mailto:vankasteelj@gmail.com"><i class="icon-envelope"></i></a>
+		</div>
+		
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+
+
+	
+	<!-- ========== titre ========== -->
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row" id="main">
+				<h1>B.A.D.</h1>
+				<br>
+				<h3>Thriller politique de science-fiction</h3>
+				<div id="synops" class="col-lg-6 col-lg-offset-3">
+                    <p>Explorer est en reconnaissance autour de la Terre. Le réseau quantique s'est soudain arrêté, les boucliers de défense de la planète sont levés. Toutes les communications ont été coupées, sans avertissement. Une crise majeure s'annonce sur les colonies&nbsp;: pendant que le général Kraft essaie de garder la situation en main, le Commandant Belavitch sur Explorer inspecte le système de défense atmosphérique pour trouver une brèche et entrer en communication avec le sol.</p>
+				</div>
+                <div id="playlist">
+                    <audio id="player" controls preload="metadata" volume="1">
+                      <source src="" type="audio/mpeg">
+                      Désolé, ce navigateur ne supporte pas l'HTML 5.0
+                    </audio>
+                    <ul></ul>
+                </div>
+
+                <script>
+                    var folder = "audio";
+                    var playlist = [
+                        "example1.mp3",
+                        "example2.mp3"
+                    ];
+                    for (var i in playlist) {
+                        jQuery('#playlist ul').append('<li data-id="'+i+'" onClick="play(this)">'+playlist[i]+'</li>');
+                    }
+
+                    var player = document.getElementById('player');
+                    var playing = playlist[0];
+                    player.src = folder + '/' + playing;
+
+                    function display(id) {
+                        var list = jQuery('#playlist ul').children();
+                        list.removeClass('playing');
+                        jQuery(list[id]).addClass('playing');
+                    }
+                    
+                    display(0);
+
+                    player.onended = function(){
+                        var ind_next = playlist.indexOf(playing) + 1;
+
+                        if (ind_next !== 0) {
+                            player.src = folder + '/' + playlist[ind_next];
+                            playing = player.src;
+                            display(ind_next)
+                            player.play();
+                        }
+                    }
+                    
+                    function play(el) {
+                        console.log(el);
+                        var id = jQuery(el).attr('data-id');
+                        display(id);
+                        player.src = folder + '/' + playlist[id];
+                        player.play();
+                    }
+                </script>
+			</div>
+
+			<div class="row hidden" id="about">
+				<h1>B.A.D.</h1>
+				<br>
+				<h3>
+                    Écrit et réalisé par Jean van Kasteel
+                    <br>
+                    <em style="font-size: 70%">dans le cadre de la Saga de l'Été 2016</em>
+                </h3>
+				<div id="synops" class="col-lg-6 col-lg-offset-3">
+                    <ul>
+                        <li>>&nbsp;&nbsp;Commandant Matthieu Belavitch : Jean van Kasteel (vaykadji)</li>
+                        <li>>&nbsp;&nbsp;Second Christopher Walt : Emmanuel Belart</li>
+                        <li>>&nbsp;&nbsp;7-li : Leto.75</li>
+                        <li>>&nbsp;&nbsp;Opérateur Lunestation : Jean van Kasteel (vaykadji)</li>
+                        <br>
+                        
+                        <li>>&nbsp;&nbsp;Ambassadrice Joséphine Belavitch : ???</li>
+                        <li>>&nbsp;&nbsp;Diego (mari de l'ambassadrice) : ???</li>
+                        <li>>&nbsp;&nbsp;Conseiller Alfred Trion : Leto.75</li>
+                        <li>>&nbsp;&nbsp;Marie (fille de l'ambassadrice) : ???</li>
+                        <li>>&nbsp;&nbsp;Présentateur (show) : Leto.75</li>
+                        <li>>&nbsp;&nbsp;Trévor (réceptionniste) : Yggdrasil Vanaheim</li>
+                        <li>>&nbsp;&nbsp;Président Gaïus Flémur : Lorendil</li>
+                        <li>>&nbsp;&nbsp;Journaliste radio : Jean van Kasteel (vaykadji)</li>
+                        <li>>&nbsp;&nbsp;Opérateur (show) : ???</li>
+                        <br>
+
+                        <li>>&nbsp;&nbsp;Conseiller Lunaire Éric Gasparoff : Lorendil</li>
+                        <li>>&nbsp;&nbsp;Général Gérald Kraft : Grushkov</li>
+                        <li>>&nbsp;&nbsp;Garde du Général : Lorendil</li>
+                        <br>
+                        
+                        <li>>&nbsp;&nbsp;Narration : ???</li>
+                        <li>>&nbsp;&nbsp;Musiques : Ross Bugden</li>
+                    </ul>
+				</div>
+			</div>
+
+			<div class="row hidden" id="download">
+				<h1>B.A.D.</h1>
+				<br>
+				<h3>Téléchargements</h3>
+                <br>
+				<a class="button" href="audio/example1.mp3" download>Épisode 01</a>
+                <br>
+				<a class="button" href="audio/example1.mp3" download>Épisode 02</a>
+                <br>
+				<a class="button" href="audio/example1.mp3" download>Épisode 03</a>
+                <br>
+				<a class="button" href="audio/example1.mp3" download>Épisode 04</a>
+
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/main.js"></script>
+
+    <script>
+        function showAbout () {
+            jQuery('.menu-close').click();
+            jQuery('#main').addClass('hidden');
+            jQuery('#download').addClass('hidden');
+            jQuery('#about').removeClass('hidden');
+        }
+
+        function showDownload () {
+            jQuery('.menu-close').click();
+            jQuery('#main').addClass('hidden');
+            jQuery('#about').addClass('hidden');
+            jQuery('#download').removeClass('hidden');
+        }
+        
+        function showMain () {
+            jQuery('.menu-close').click();
+            jQuery('#about').addClass('hidden');
+            jQuery('#download').addClass('hidden');
+            jQuery('#main').removeClass('hidden');
+        }
+    </script>
+</body>
+</html>
