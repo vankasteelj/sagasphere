@@ -31,7 +31,7 @@
 			<i class="icon-remove menu-close"></i>
             <a onClick="showAbout()">La Saga</a>
             <a onClick="showMain()">Écouter</a>
-			<a onClick="showDownload()">Télécharger</a>
+			<!--a onClick="showDownload()">Télécharger</a-->
 			<a href="https://facebook.com/vankasteelj"><i class="icon-facebook"></i></a>
 			<a href="https://twitter.com/vankasteelj"><i class="icon-twitter"></i></a>
 			<a href="mailto:vankasteelj@gmail.com"><i class="icon-envelope"></i></a>
@@ -64,8 +64,10 @@
                 <script>
                     var folder = "audio";
                     var playlist = [
-                        "example1.mp3",
-                        "example2.mp3"
+                        "B.A.D. - Épisode 01.mp3",
+                        "B.A.D. - Épisode 02.mp3",
+                        "B.A.D. - Épisode 03.mp3",
+                        "B.A.D. - Épisode 04.mp3"
                     ];
                     for (var i in playlist) {
                         jQuery('#playlist ul').append('<li data-id="'+i+'" onClick="play(this)">'+playlist[i]+'</li>');
@@ -148,13 +150,13 @@
 				<br>
 				<h3>Téléchargements</h3>
                 <br>
-				<a class="button" href="audio/example1.mp3" download>Épisode 01</a>
+				<a class="button" href="audio/B.A.D.%20-%20%C3%89pisode%2001.mp3" download>Épisode 01</a>
                 <br>
-				<a class="button" href="audio/example1.mp3" download>Épisode 02</a>
+				<a class="button" href="audio/B.A.D.%20-%20%C3%89pisode%2002.mp3" download>Épisode 02</a>
                 <br>
-				<a class="button" href="audio/example1.mp3" download>Épisode 03</a>
+				<a class="button" href="audio/B.A.D.%20-%20%C3%89pisode%2003.mp3" download>Épisode 03</a>
                 <br>
-				<a class="button" href="audio/example1.mp3" download>Épisode 04</a>
+				<a class="button" href="audio/B.A.D.%20-%20%C3%89pisode%2004.mp3" download>Épisode 04</a>
 
 			</div>
 		</div><!-- /container -->
