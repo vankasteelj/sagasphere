@@ -93,3 +93,7 @@ li {
     opacity: .8;
     text-shadow: none;
 }
+
+#download p {
+    text-shadow: none;
+}
