@@ -1,12 +1,123 @@
- <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Sagasphère</title>
-</head>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="saga, mp3, audio, radio, fiction, médiéval, héros, merveilleuses, aventures, kalon">
+    <meta name="description" content="Suivez les trépidantes aventures de Kalon, barbare héborien, adaptées en roman audio">
 
-<body>
-    Site en construction...
+    <title>Kalon | Sagasphère</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="assets/css/kalon.css" rel="stylesheet">
+
+    <script src="assets/js/jquery.min.js"></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+  </head>
+
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="../index.html">Sagasphère</a></h1>
+			<i class="icon-remove menu-close"></i>
+            <a onClick="showAbout()">La Saga</a>
+            <a onClick="showMain()">Écouter</a>
+			<a onClick="showDownload()">Télécharger</a>
+			<a href="https://facebook.com/vankasteelj"><i class="icon-facebook"></i></a>
+			<a href="https://twitter.com/vankasteelj"><i class="icon-twitter"></i></a>
+			<a href="mailto:vankasteelj@gmail.com"><i class="icon-envelope"></i></a>
+		</div>
+		
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
+
+
+	
+	<!-- ========== titre ========== -->
+	<div id="headerwrap">
+		<div class="container">
+			<div class="row" id="main">
+				<h1>Les Merveilleuses Aventures de Kalon</h1>
+				<br>
+				<h3>Roman audio</h3>
+				<div id="synops" class="col-lg-6 col-lg-offset-3">
+                    <p>Les Merveilleuses Aventures de Kalon relatent les aventure du héros éponyme, rejoint dans le premier opus par Melgo le voleur, et dans le second par Sook la Sorcière Sombre. Les trois forment une compagnie d'aventuriers peu recommandable, qui s'illustre notamment durant la guerre de Sphergie, en tuant un dragon, puis le pancrate de l'Empire de Pthath, et en devenant prophètes de M'ranis, démarrant ainsi un conflit religieux lourd de conséquences.</p>
+				</div>
+                <div id="playlist">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ur72aXqztU0?list=PLuHr85cn072bzzrASWMIt3FVBAbanWffK" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+
+			</div>
+
+			<div class="row hidden" id="about">
+				<h1>Les Merveilleuses Aventures de Kalon</h1>
+				<br>
+				<h3>
+                    D'après les romans d'ASP Explorer
+                    <br>
+                    <em style="font-size: 70%">adaptés à l'audio par Jean van Kasteel</em>
+                </h3>
+				<div id="synops" class="col-lg-6 col-lg-offset-3">
+                    <p>Les Merveilleuses Aventures de Kalon est une série de romans/nouvelles écrite par ASP Explorer, disponible librement <a href="http://mapage.noos.fr/aspexpl/kalonbrw.htm">en ligne</a>. Je vous propose ici une adaptation des trépidantes mésaventures de nos héros en version audio.<br>Il ne s'agit pas d'un roman audio en tant que tel, puisque les dialogues sont légèrement joués, et le montage inclut quelques bruitages et fonds musicaux. Voyez cela plutôt comme un mélange entre Saga MP3 et Roman Audio.</p>
+				</div>
+			</div>
+
+			<div class="row hidden" id="download">
+				<h1>Les Merveilleuses Aventures de Kalon</h1>
+				<br>
+				<h3>Téléchargements</h3>
+                <br>
+				<a class="button" href="audio/Kalon%20I%20-%20L'%C3%AEle%20du%20Dieu%20fou.zip" download>L'île du Dieu Fou</a>
+                <br>
+				<a class="fakebutton">À venir... La Sorcière Sombre</a>
+                <br>
+
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/main.js"></script>
+
+    <script>
+        function showAbout () {
+            jQuery('.menu-close').click();
+            jQuery('#main').addClass('hidden');
+            jQuery('#download').addClass('hidden');
+            jQuery('#about').removeClass('hidden');
+        }
+
+        function showDownload () {
+            jQuery('.menu-close').click();
+            jQuery('#main').addClass('hidden');
+            jQuery('#about').addClass('hidden');
+            jQuery('#download').removeClass('hidden');
+        }
+        
+        function showMain () {
+            jQuery('.menu-close').click();
+            jQuery('#about').addClass('hidden');
+            jQuery('#download').addClass('hidden');
+            jQuery('#main').removeClass('hidden');
+        }
+    </script>
 </body>
-
 </html>
