@@ -18,9 +18,8 @@ li {
 
 #synops {
     margin-top: 50px;
-    color: #555;
-    font-size: 16px;
-    text-shadow: 2px 1px 4px #ddd;
+    color: #f0f0f0;
+    font-size: 16px
 }
 .menu-wrap a {
     cursor: pointer;
@@ -36,13 +35,12 @@ li {
     margin-top: 0px;
     border-radius: 4px;
     box-shadow: 1px 1px 20px black;
-    text-shadow: none;
-    color: #555;
+    color: #f0f0f0;
     background: rgba(240,240,240,.65);
 }
 
 .button:hover {
-    background: rgba(245,245,245,.55);
+    background: rgba(255,255,255,.75);
 }
 
 #player {
@@ -50,7 +48,7 @@ li {
 }
 
 #playlist {
-    width: 560px;
+    width: 450px;
     margin: 0 auto;
     margin-top: 40px;
     padding: 5px;
@@ -87,13 +85,18 @@ li {
     margin-bottom: 25px;
 }
 
-
-.fakebutton {
-    color: #555;
-    opacity: .8;
-    text-shadow: none;
+body {
+    background-color: #202020;
 }
 
-#download p {
-    text-shadow: none;
+#headerwrap {
+	background-image: url(../../bad/img/bg.jpg);
+}
+
+#headerwrap h1 {
+	color: white;
+}
+
+#headerwrap h3 {
+	color: white;
 }
