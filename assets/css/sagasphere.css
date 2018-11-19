@@ -1,0 +1,81 @@
+#headerwrap h1 {
+    color: white;
+}
+#headerwrap h3 {
+    text-shadow: none;
+    color: #555;
+}
+p {
+    text-shadow: none!important;
+    color: #ddd;
+}
+ul {
+    margin: 0;
+    padding-top: 5px;
+}
+li {
+    list-style: none;
+    margin-left: 20px;;
+    text-decoration: none;
+    text-align: left;
+    height: 18px;
+    line-height: 18px;
+    padding: 0;
+    font-size: 16px;
+    color: #ddd;
+    border: 0;
+    cursor: default;
+}
+
+#synops {
+    margin-top: 50px;
+    color: #555;
+    font-size: 16px;
+    text-shadow: 2px 1px 4px #ddd;
+}
+.menu-wrap a {
+    cursor: pointer;
+}
+.button {
+    font-family: inherit;
+    display: inline-block;
+    font-size: 19px;
+    line-height: 40px;
+    height: 40px;
+    width: 250px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 20px black;
+    text-shadow: none;
+    color: #555;
+    background: rgba(240,240,240,.65);
+}
+
+.button:hover {
+    background: rgba(245,245,245,.55);
+}
+
+#faq p {
+    font-style: italic
+}
+#faq p q {
+    font-style: normal;
+    color: white;
+    font-size: 1.5em;
+    line-height: 2em;
+}
+#main #synops p {
+    text-align: justify;
+    color: #bbb;
+    line-height: 1.6em;
+}
+#main #synops img {
+    padding-bottom: 15px;
+}
+#main #synops .info {
+    color: #ccc;
+    text-align: center;
+    font-size: .7em;
+    font-family: monospace;
+}
